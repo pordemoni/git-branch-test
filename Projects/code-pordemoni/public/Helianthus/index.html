@@ -1,9 +1,16 @@
 <html lang="en">
 
 <head>
+
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Bootstrap CSS-->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
    <title>Helianthus</title>
+
 </head>
 
 <body>
@@ -12,41 +19,245 @@
    <p>You have reached the <b>/code-pordemoni/helianthus</b> directory</p>
 
    <form action="#">
-      <!-- data (basic info) -->
+      <!-- * Basic info -->
       <div>
          <legend>Basic info</legend>
-         <label for="">Type</label>
-         <input type="text" placeholder="Enter flower type" id="input-flower-type">
-         <label for="">Species</label>
-         <input type="text" placeholder="Enter flower species" id="input-flower-species">
+         <!-- flower type -->
+         <div class="input-group">
+            <div class="input-group-prepend">
+               <div class="input-group-text">Flower type</div>
+            </div>
+
+            <input type="text" id="flower-type" class="form-control">
+         </div>
+         <!-- flower species -->
+         <div class="input-group">
+            <div class="input-group-prepend">
+               <div class="input-group-text">Species</div>
+            </div>
+
+            <input type="text" id="flower-species" class="form-control">
+         </div>
       </div>
 
 
-      <!-- data (status) -->
+      <!-- * Plant status -->
       <div>
          <legend>Status</legend>
-         <input type="checkbox" id="input-radio-active-yes" value="yes">
-         <label for="input-radio-active-yes">Yes</label>
-         <input type="checkbox" id="input-radio-active-no" value="no">
-         <label for="input-radio-active-yes">No, it daed</label>
+
+         <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <!-- Active -->
+            <label class="btn btn-primary active">
+               <input type="radio" id="input-status-active" name="input-status" value="active">
+               Active
+            </label>
+
+            <!-- inactive -->
+            <label class="btn btn-primary">
+               <input type="radio" id="input-status-inactive" name="input-status" value="inactive">
+               Inactive
+            </label>
+         </div>
       </div>
 
-
-      <!-- data (events) -->
+      <!-- * Plant events -->
       <div>
          <legend>Events</legend>
-         <input type="date">
-         <input type="date">
-         <input type="date">
-         <input type="date">
-         <input type="date">
+         <div class="form-row">
+            <div class="col-4">
+               <!-- date planted -->
+               <div class="input-group">
+                  <div class="input-groupd-prepend">
+                     <span class="input-group-text">Date planted</span>
+                  </div>
+
+                  <input type="date" id="date-planted" class="form-control">
+               </div>
+            </div>
+
+            <div class="col-4">
+               <!-- date sprouted -->
+               <div class="input-group">
+                  <div class="input-groupd-prepend">
+                     <span class="input-group-text">Date sprouted</span>
+                  </div>
+
+                  <input type="date" id="date-sprouted" class="form-control">
+               </div>
+            </div>
+
+            <div class="col-4">
+               <!-- date budded -->
+               <div class="input-group">
+                  <div class="input-groupd-prepend">
+                     <span class="input-group-text">Date budded</span>
+                  </div>
+
+                  <input type="date" id="date-budded" class="form-control">
+               </div>
+            </div>
+
+            <div class="col-4">
+               <!-- date bloomed -->
+               <div class="input-group">
+                  <div class="input-groupd-prepend">
+                     <span class="input-group-text">Date bloomed</span>
+                  </div>
+
+                  <input type="date" id="date-bloomed" class="form-control">
+               </div>
+            </div>
+
+            <div class="col-4">
+               <!-- date harvested -->
+               <div class="input-group">
+                  <div class="input-groupd-prepend">
+                     <span class="input-group-text">Date harvested</span>
+                  </div>
+
+                  <input type="date" id="date-harvested" class="form-control">
+               </div>
+            </div>
+         </div>
+
+
+
+
+
       </div>
-      <!-- data (environment) -->
 
+      <!-- * Environment-->
+      <div>
+         <!-- > Soil info -->
+         <legend>Soil</legend>
 
-      <!-- data (system) -->
+         <div class="form-row">
+            <!-- soil type -->
+            <div class="col">
+               <div class="input-group">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text">Type</span>
+                  </div>
+                  <input type="text" id="soil-type" class="form-control" placeholder="Type">
+               </div>
+            </div>
+            <!-- soil volume -->
+            <div class="col">
+               <div class="input-group">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text">Volume</span>
+                  </div>
+                  <input type="text" id="soil-volume" class="form-control" placeholder="Volume">
+               </div>
+            </div>
+            <!-- soil seed depth -->
+            <div class="col">
+               <div class="input-group">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text">Seed depth</span>
+                  </div>
+                  <input type="text" id="soil-seed-depth" class="form-control" placeholder="Seed depth">
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- > Pot info  -->
+      <div>
+         <legend>Pot</legend>
+
+         <div class="form-row">
+            <!-- pot type -->
+            <div class="col">
+               <div class="input-group">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text">Type</span>
+                  </div>
+                  <input type="text" id="pot-type" class="form-control" placeholder="Type">
+               </div>
+            </div>
+            <!-- pot drainage-->
+            <div class="col">
+               <div class="input-group">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text">Drainage</span>
+                  </div>
+                  <input type="text" id="pot-drainage" class="form-control" placeholder="Drainage">
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- > Neighbors info -->
+      <div>
+         <legend>Neighbors</legend>
+         <div class="form-row">
+            <!-- neighbor type -->
+            <div class="col">
+               <div class="input-group">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text">Type</span>
+                  </div>
+                  <input type="text" id="neighbor-type" class="form-control" placeholder="Type">
+               </div>
+            </div>
+            <!-- neighbor total -->
+            <div class="col">
+               <div class="input-group">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text">Total</span>
+                  </div>
+                  <input type="text" id="neighbor-total" class="form-control" placeholder="Total">
+               </div>
+            </div>
+            <!-- neighbor distance -->
+            <div class="col">
+               <div class="input-group">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text">Distance</span>
+                  </div>
+                  <input type="text" id="neighbor-distance" class="form-control" placeholder="Distance">
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- * System info -->
+      <div>
+         <legend>System</legend>
+         <div class="form-row">
+            <!-- system bulid-version -->
+            <div class="col">
+               <div class="input-group">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text">Build version</span>
+                  </div>
+                  <input type="text" id="system-bulid-version" class="form-control" placeholder="Build version">
+               </div>
+            </div>
+            <!-- system author-->
+            <div class="col">
+               <div class="input-group">
+                  <div class="input-group-prepend">
+                     <span class="input-group-text">@</span>
+                  </div>
+                  <input type="text" id="system-author" class="form-control" placeholder="Author">
+               </div>
+            </div>
+         </div>
+      </div>
    </form>
 
+   <!-- Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>
