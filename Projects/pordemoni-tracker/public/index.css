@@ -1,0 +1,50 @@
+body {
+   background: #222222 !important;
+   font-family: 'Coda', cursive !important;
+   
+}
+.modal-body {
+   font-family: 'Fira Sans', sans-serif !important;
+}
+.form-wrapper {
+	max-width: 720px !important;
+}
+#logs-display {
+   /* max-height: 420px !important;
+   overflow-y: scroll; */
+}
+.log-entry {
+	background: #333 !important;
+}
+.log-entry:hover {
+	-webkit-filter: brightness(80%);
+	filter: brightness(80%);
+}
+
+span.dynamic-display-data {
+   font-weight: bold;
+   text-decoration: underline;
+}
+
+/* width */
+::-webkit-scrollbar {
+   width: 10px;
+   
+ }
+ 
+ /* Track */
+ ::-webkit-scrollbar-track {
+   background: #f1f1f1;
+   border-radius: 4px;
+ }
+ 
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   background: #888;
+   border-radius: 4px;
+ }
+ 
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+   background: #555;
+ }
